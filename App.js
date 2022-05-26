@@ -1,5 +1,7 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Image, Text, View } from 'react-native';
+import { useFonts } from 'expo-font';
+import AppLoading from 'expo-app-loading';
 import {
   Inter_100Thin,
   Inter_200ExtraLight,
@@ -11,23 +13,26 @@ import {
   Inter_800ExtraBold,
   Inter_900Black,
 } from '@expo-google-fonts/inter';
-import { useFonts } from 'expo-font';
-export default function App() {
-  let { fontsLoaded } = useFonts({
-    Thin: Inter_100Thin,
-    ExtraLight: Inter_200ExtraLight,
-    Light: Inter_300Light,
-    Regular: Inter_400Regular,
-    Medium: Inter_500Medium,
-    SemiBold: Inter_600SemiBold,
-    Bold: Inter_700Bold,
-    ExtraBold: Inter_800ExtraBold,
-    Black: Inter_900Black,
-  });
 
+export default function App() {
+  let [fontsLoaded] = useFonts({
+    Inter_100Thin,
+    Inter_200ExtraLight,
+    Inter_300Light,
+    Inter_400Regular,
+    Inter_500Medium,
+    Inter_600SemiBold,
+    Inter_700Bold,
+    Inter_800ExtraBold,
+    Inter_900Black,
+  });
+  if (!fontsLoaded) {
+    return <AppLoading />;
+  }
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>IN BOOKS</Text>
+      <Image source={require('./assets/Logos/LogoW.png')} style={styles.logo} />
+      <Text style={styles.text}>IN{'\n'}BOOKS</Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -42,8 +47,13 @@ const styles = StyleSheet.create({
   },
   text: {
     textAlign: 'center',
-    fontFamily: 'Bold',
-    fontSize: 130,
+    fontFamily: 'Inter_700Bold',
+    fontSize: 100,
     color: '#9A9483',
+  },
+  logo: {
+    width: 280,
+    height: 225,
+    marginBottom: 200,
   },
 });
