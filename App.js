@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Image, Text, View } from 'react-native';
 import { useFonts } from 'expo-font';
 import AppLoading from 'expo-app-loading';
+import * as Animatable from 'react-native-animatable';
 import {
   Inter_100Thin,
   Inter_200ExtraLight,
@@ -31,8 +32,10 @@ export default function App() {
   }
   return (
     <View style={styles.container}>
-      <Image source={require('./assets/Logos/LogoW.png')} style={styles.logo} />
-      <Text style={styles.text}>IN{'\n'}BOOKS</Text>
+      <Animatable.Image animation="zoomIn" duration={700} source={require('./assets/Logos/LogoW.png')} style={styles.logo} />
+      <Animatable.Text animation="zoomIn" duration={700} style={styles.text}>
+        IN{'\n'}BOOKS
+      </Animatable.Text>
       <StatusBar style="auto" />
     </View>
   );
@@ -54,6 +57,6 @@ const styles = StyleSheet.create({
   logo: {
     width: 280,
     height: 225,
-    marginBottom: 200,
+    marginBottom: 150,
   },
 });
