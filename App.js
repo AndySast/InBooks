@@ -14,6 +14,7 @@ import {
   Inter_800ExtraBold,
   Inter_900Black,
 } from '@expo-google-fonts/inter';
+import { ease, linear } from 'react-native/Libraries/Animated/Easing';
 
 export default function App() {
   let [fontsLoaded] = useFonts({
@@ -33,7 +34,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Animatable.Image animation="zoomIn" duration={700} source={require('./assets/Logos/LogoW.png')} style={styles.logo} />
-      <Animatable.Text animation="zoomIn" duration={700} style={styles.text}>
+      <Animatable.Text animation="zoomIn" delay={700} duration={700} style={styles.text}>
         IN{'\n'}BOOKS
       </Animatable.Text>
       <StatusBar style="auto" />
@@ -58,5 +59,11 @@ const styles = StyleSheet.create({
     width: 280,
     height: 225,
     marginBottom: 150,
+  },
+  newtext: {
+    textAlign: 'center',
+    fontFamily: 'Inter_700Bold',
+    fontSize: 80,
+    color: '#9A9483',
   },
 });
