@@ -55,6 +55,7 @@ const styles = StyleSheet.create({
   textview: {
     height: 200,
     marginBottom: 80,
+    width: '90%',
   },
   logo: {
     alignItems: 'center',
