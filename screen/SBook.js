@@ -21,7 +21,7 @@ function SBook() {
       </View>
       <View style={styles.Details}>
         <TouchableOpacity>
-          <Text style={styles.DetailsText}>Details ...</Text>
+          <Text style={styles.DetailsText}>Details ... </Text>
         </TouchableOpacity>
       </View>
     </View>

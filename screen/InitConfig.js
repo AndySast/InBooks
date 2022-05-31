@@ -17,7 +17,7 @@ function InitConfig({ navigation }) {
           <Text style={styles.texts}>My Books +</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.texts}>Tus Deseos +</Text>
+          <Text style={styles.texts}>My Wishes +</Text>
         </TouchableOpacity>
       </View>
     </View>
