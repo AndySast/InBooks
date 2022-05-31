@@ -4,6 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Updating from './screen/updating';
 import Login from './screen/Login';
 import CreateAccount from './screen/CreateAccount';
+import InitConfig from './screen/InitConfig';
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -13,6 +14,7 @@ function App() {
         <Stack.Screen name="Home" component={Updating} options={{ headerShown: false }} />
         <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
         <Stack.Screen name="CreateAccount" component={CreateAccount} options={{ headerShown: false }} />
+        <Stack.Screen name="InitConfig" component={InitConfig} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

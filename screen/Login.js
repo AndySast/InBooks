@@ -6,6 +6,9 @@ function Login({ navigation }) {
   const handleCreateAccount = () => {
     navigation.navigate('CreateAccount');
   };
+  const handleInitConfig = () => {
+    navigation.navigate('InitConfig');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.logo}>
@@ -19,7 +22,7 @@ function Login({ navigation }) {
         <TxtInput placeholder="Password" password={true} />
       </View>
       <View>
-        <Btton navigation={navigation} text="Sign In" />
+        <Btton navigation={navigation} text="Sign In" rut={handleInitConfig} />
       </View>
       <TouchableOpacity onPress={handleCreateAccount}>
         <Text style={styles.createaccount}>Create account</Text>

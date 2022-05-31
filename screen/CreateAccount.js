@@ -1,15 +1,12 @@
 import { Text, StyleSheet, View, Image, TouchableOpacity } from 'react-native';
-import * as Animatable from 'react-native-animatable';
+import Header from '../Components/Header';
 import TxtInput from '../Components/TextInput';
 import Btton from '../Components/Button';
 function CreateAccount({ navigation }) {
   return (
     <View style={styles.container}>
-      <View style={styles.logo}>
-        <Animatable.Image animation="zoomIn" delay={350} duration={200} source={require('../assets/Logos/LogoW.png')} style={styles.image} />
-        <Animatable.Text animation="zoomIn" delay={350} duration={200} style={styles.text}>
-          INBOOKS
-        </Animatable.Text>
+      <View style={styles.header}>
+        <Header />
       </View>
       <View style={styles.textview}>
         <TxtInput placeholder="First name" />
@@ -39,26 +36,13 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
-  logo: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'flex-start',
-    flexDirection: 'row',
+  header: {
+    height: '15%',
     width: '90%',
-  },
-  text: {
-    marginLeft: 20,
-    textAlign: 'center',
-    fontFamily: 'Inter_700Bold',
-    fontSize: 60,
-    color: '#9A9483',
-  },
-  image: {
-    width: 94,
-    height: 75,
+    marginBottom: '10%',
   },
   textview: {
-    height: 550,
+    height: '50%',
     width: '90%',
   },
   SignUp: {
