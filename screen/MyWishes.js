@@ -8,6 +8,9 @@ function MyWishes({ navigation }) {
   const handleBook = () => {
     navigation.navigate('Book');
   };
+  const handleWish = () => {
+    navigation.navigate('BookWish');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -18,7 +21,7 @@ function MyWishes({ navigation }) {
       </View>
       <View style={styles.Books}>
         <Book title="The Lord of the Rings" rut={handleBook} />
-        <Book title="Dracula" />
+        <Book title="Dracula" rut={handleWish} />
         <Book title="The Catcher in the Rye" />
         <Book title="The Hunger Games" />
         <Book title="The Fault in Our Stars" />
