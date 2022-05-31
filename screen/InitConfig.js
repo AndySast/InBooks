@@ -13,8 +13,8 @@ function InitConfig({ navigation }) {
         </TouchableOpacity>
       </View>
       <View style={styles.options}>
-        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.texts}>Tus Libros +</Text>
+        <TouchableOpacity onPress={() => navigation.navigate('MyBooks')}>
+          <Text style={styles.texts}>My Books +</Text>
         </TouchableOpacity>
         <TouchableOpacity onPress={() => navigation.navigate('Login')}>
           <Text style={styles.texts}>Tus Deseos +</Text>
