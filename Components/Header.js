@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     marginLeft: 20,
     textAlign: 'center',
     fontFamily: 'Inter_700Bold',
-    fontSize: 60,
+    fontSize: 40,
     color: '#9A9483',
   },
   image: {
