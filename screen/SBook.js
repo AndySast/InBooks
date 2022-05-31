@@ -3,7 +3,10 @@ import Header from '../Components/Header';
 import Title from '../Components/Ttile';
 import Images from '../Components/Images';
 import Description from '../Components/Description';
-function SBook() {
+function SBook({ navigation }) {
+  const handleDetails = () => {
+    navigation.navigate('Details');
+  };
   const text = 'Hola, tengo este libro en pasta blanda, lo compre hace 2 años pero está en buen estado, el tamaño de la letra es un poco pequeño pero se lee muy bien.';
   return (
     <View style={styles.container}>
@@ -20,7 +23,7 @@ function SBook() {
         <Description text={text} />
       </View>
       <View style={styles.Details}>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={handleDetails}>
           <Text style={styles.DetailsText}>Details ... </Text>
         </TouchableOpacity>
       </View>
