@@ -1,10 +1,13 @@
 import { View, StyleSheet, TouchableOpacity, Text, Image } from 'react-native';
 import Header from '../Components/Header';
 function InitConfig({ navigation }) {
+  const handleSettingsUser = () => {
+    navigation.navigate('SettingsUser');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Header />
+        <Header mostrar={true} navigation={navigation} />
       </View>
       <View style={styles.containerprofile}>
         <TouchableOpacity style={styles.containerprofile} onPress={() => navigation.navigate('Login')}>

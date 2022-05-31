@@ -10,6 +10,7 @@ import Book from './screen/SBook';
 import MyWishes from './screen/MyWishes';
 import BookWish from './screen/BookWish';
 import Details from './screen/Details';
+import SettingsUser from './screen/SettingsUser';
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Stack.Screen name="MyWishes" component={MyWishes} options={{ headerShown: false }} />
         <Stack.Screen name="BookWish" component={BookWish} options={{ headerShown: false }} />
         <Stack.Screen name="Details" component={Details} options={{ headerShown: false }} />
+        <Stack.Screen name="SettingsUser" component={SettingsUser} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

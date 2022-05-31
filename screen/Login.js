@@ -9,6 +9,9 @@ function Login({ navigation }) {
   const handleInitConfig = () => {
     navigation.navigate('InitConfig');
   };
+  const handleSettingsUser = () => {
+    navigation.navigate('SettingsUser');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.logo}>
