@@ -1,9 +1,10 @@
 import { View, StyleSheet } from 'react-native';
-import Book from '../Components/Book';
-import Header from '../Components/Header';
 import Btton from '../Components/Button';
 import Title from '../Components/Ttile';
-function MyBooks({ navigation }) {
+import Book from '../Components/Book';
+import Header from '../Components/Header';
+
+function MyWishes({ navigation }) {
   const handleBook = () => {
     navigation.navigate('Book');
   };
@@ -13,11 +14,11 @@ function MyBooks({ navigation }) {
         <Header />
       </View>
       <View style={styles.title}>
-        <Title content="My Books" />
+        <Title content="My Wishes" />
       </View>
       <View style={styles.Books}>
         <Book title="The Lord of the Rings" rut={handleBook} />
-        <Book title="The Hobbit" />
+        <Book title="Dracula" />
         <Book title="The Catcher in the Rye" />
         <Book title="The Hunger Games" />
         <Book title="The Fault in Our Stars" />
@@ -29,7 +30,8 @@ function MyBooks({ navigation }) {
   );
 }
 
-export default MyBooks;
+export default MyWishes;
+
 const styles = StyleSheet.create({
   container: {
     flex: 1,
