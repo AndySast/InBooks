@@ -2,7 +2,9 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import Header from '../Components/Header';
 import Title from '../Components/Ttile';
 import Images from '../Components/Images';
+import Description from '../Components/Description';
 function SBook() {
+  const text = 'Hola, tengo este libro en pasta blanda, lo compre hace 2 años pero está en buen estado, el tamaño de la letra es un poco pequeño pero se lee muy bien.';
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -15,9 +17,7 @@ function SBook() {
         <Images />
       </View>
       <View style={styles.Description}>
-        <Text style={styles.Descriptiontext}>
-          Hola, tengo este libro en pasta blanda, lo compre hace 2 años pero está en buen estado, el tamaño de la letra es un poco pequeño pero se lee muy bien.
-        </Text>
+        <Description text={text} />
       </View>
       <View style={styles.Details}>
         <TouchableOpacity>
@@ -54,11 +54,6 @@ const styles = StyleSheet.create({
     width: '90%',
     height: '20%',
     marginTop: '10%',
-  },
-  Descriptiontext: {
-    fontFamily: 'Inter_300Light',
-    fontSize: 30,
-    color: '#9A9483',
   },
   Details: {
     width: '90%',
