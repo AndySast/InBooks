@@ -6,6 +6,7 @@ import Login from './screen/Login';
 import CreateAccount from './screen/CreateAccount';
 import InitConfig from './screen/InitConfig';
 import MyBooks from './screen/MyBooks';
+import Book from './screen/SBook';
 const Stack = createNativeStackNavigator();
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
         <Stack.Screen name="CreateAccount" component={CreateAccount} options={{ headerShown: false }} />
         <Stack.Screen name="InitConfig" component={InitConfig} options={{ headerShown: false }} />
         <Stack.Screen name="MyBooks" component={MyBooks} options={{ headerShown: false }} />
+        <Stack.Screen name="Book" component={Book} options={{ headerShown: false }} />
       </Stack.Navigator>
     </NavigationContainer>
   );

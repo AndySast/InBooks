@@ -1,18 +1,22 @@
-import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { View, Text, StyleSheet } from 'react-native';
 import Book from '../Components/Book';
 import Header from '../Components/Header';
 import Btton from '../Components/Button';
-function MyBooks() {
+import Title from '../Components/Ttile';
+function MyBooks({ navigation }) {
+  const handleBook = () => {
+    navigation.navigate('Book');
+  };
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Header />
       </View>
       <View style={styles.title}>
-        <Text style={styles.titletext}>My Books</Text>
+        <Title content="My Books" />
       </View>
       <View style={styles.Books}>
-        <Book title="The Lord of the Rings" />
+        <Book title="The Lord of the Rings" rut={handleBook} />
         <Book title="The Hobbit" />
         <Book title="The Catcher in the Rye" />
         <Book title="The Hunger Games" />
@@ -40,12 +44,6 @@ const styles = StyleSheet.create({
   title: {
     width: '70%',
     height: '10%',
-    alignItems: 'flex-start',
-  },
-  titletext: {
-    fontSize: 60,
-    fontFamily: 'Inter_500Medium',
-    color: '#9A9483',
   },
   Books: {
     width: '90%',

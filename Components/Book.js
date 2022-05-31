@@ -1,9 +1,9 @@
 import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
 
-function Book({ title }) {
+function Book({ title, rut }) {
   return (
     <View style={styles.container}>
-      <TouchableOpacity>
+      <TouchableOpacity onPress={rut}>
         <View style={styles.Book}>
           <View style={styles.Img}>
             <Image style={styles.img} source={require('../assets/Logos/LogoW.png')} />

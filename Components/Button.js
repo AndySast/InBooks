@@ -1,6 +1,6 @@
 import { Card } from 'react-native-shadow-cards';
 import { Text, View, StyleSheet, TouchableOpacity } from 'react-native';
-function Btton({ navigation, text, rut }) {
+function Btton({ text, rut }) {
   return (
     <TouchableOpacity onPress={rut}>
       <Card style={styles.card}>
